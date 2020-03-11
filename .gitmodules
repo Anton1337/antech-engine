@@ -1,0 +1,3 @@
+[submodule "antech-engine/vendor/spdlog"]
+	path = antech-engine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
