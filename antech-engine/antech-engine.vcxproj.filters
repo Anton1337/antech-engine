@@ -4,6 +4,9 @@
     <Filter Include="antech">
       <UniqueIdentifier>{F8472BF2-E4E9-55C8-CDA4-691CB9E5DC18}</UniqueIdentifier>
     </Filter>
+    <Filter Include="antech\Events">
+      <UniqueIdentifier>{46db8318-e2b3-4bcd-988b-0bb11c4f8c53}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Antech.h" />
@@ -18,6 +21,18 @@
     </ClInclude>
     <ClInclude Include="src\antech\Log.h">
       <Filter>antech</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>antech\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplicationEvent.h">
+      <Filter>antech\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyEvent.h">
+      <Filter>antech\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseEvent.h">
+      <Filter>antech\Events</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
