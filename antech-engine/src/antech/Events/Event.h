@@ -1,6 +1,6 @@
 #pragma once
 
-#include "./src/antech/Core.h"
+#include "antech/Core.h"
 
 #include <string>
 #include <functional>

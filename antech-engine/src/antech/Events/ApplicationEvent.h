@@ -14,6 +14,12 @@ namespace Antech {
 		inline unsigned int GetWidth() const { return m_Width; }
 		inline unsigned int GetHeight() const { return m_Height; }
 
+		std::string ToString() const override {
+			std::stringstream ss;
+			ss << "WindowResizeEvent: " << "(" << GetWidth() << ", " << GetHeight() << ")";
+			return ss.str();
+		}
+
 		EVENT_CLASS_TYPE(WindowResize)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 
