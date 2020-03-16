@@ -10,6 +10,11 @@ workspace "antech-engine"
 
  outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+ IncludeDir = {}
+ IncludeDir["GLFW"] = "antech-engine/vendor/GLFW/include"
+
+ include "antech-engine/vendor/GLFW"
+
  project "antech-engine"
  location "antech-engine"
  kind "SharedLib"
@@ -17,6 +22,9 @@ workspace "antech-engine"
 
  targetdir ("bin/" .. outputdir .. "/%{prj.name}")
  objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+ pchheader "hzpch.h"
+ pchsource "antech-engine/src/hzpch.cpp"
 
  files
  {
@@ -27,7 +35,14 @@ workspace "antech-engine"
  includedirs
  {
   "%{prj.name}/src",
-  "%{prj.name}/vendor/spdlog/include"
+  "%{prj.name}/vendor/spdlog/include",
+  "%{IncludeDir.GLFW}"
+ }
+
+ links
+ {
+   "GLFW",
+   "opengl32.lib"
  }
 
  filter "system:windows"

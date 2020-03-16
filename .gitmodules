@@ -1,3 +1,6 @@
 [submodule "antech-engine/vendor/spdlog"]
 	path = antech-engine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "antech-engine/vendor/GLFW"]
+	path = antech-engine/vendor/GLFW
+	url = https://github.com/Anton1337/glfw

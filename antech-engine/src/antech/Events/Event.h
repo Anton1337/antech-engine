@@ -2,9 +2,6 @@
 
 #include "antech/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Antech {
 
 

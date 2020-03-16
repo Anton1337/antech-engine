@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Antech {
 	class ANTECH_API KeyEvent : public Event {
 	public:
