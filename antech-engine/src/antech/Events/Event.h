@@ -1,5 +1,6 @@
 #pragma once
 
+#include "hzpch.h"
 #include "antech/Core.h"
 
 namespace Antech {

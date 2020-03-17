@@ -150,6 +150,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Antech.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\antech\Application.h" />
     <ClInclude Include="src\antech\Core.h" />
     <ClInclude Include="src\antech\EntryPoint.h" />
@@ -158,9 +159,11 @@
     <ClInclude Include="src\antech\Events\KeyEvent.h" />
     <ClInclude Include="src\antech\Events\MouseEvent.h" />
     <ClInclude Include="src\antech\Log.h" />
+    <ClInclude Include="src\antech\Window.h" />
     <ClInclude Include="src\hzpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\antech\Application.cpp" />
     <ClCompile Include="src\antech\Log.cpp" />
     <ClCompile Include="src\hzpch.cpp">
