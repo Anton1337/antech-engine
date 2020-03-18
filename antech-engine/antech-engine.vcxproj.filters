@@ -47,6 +47,12 @@
       <Filter>antech</Filter>
     </ClInclude>
     <ClInclude Include="src\hzpch.h" />
+    <ClInclude Include="src\antech\Layer.h">
+      <Filter>antech</Filter>
+    </ClInclude>
+    <ClInclude Include="src\antech\LayerStack.h">
+      <Filter>antech</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
@@ -59,5 +65,11 @@
       <Filter>antech</Filter>
     </ClCompile>
     <ClCompile Include="src\hzpch.cpp" />
+    <ClCompile Include="src\antech\Layer.cpp">
+      <Filter>antech</Filter>
+    </ClCompile>
+    <ClCompile Include="src\antech\LayerStack.cpp">
+      <Filter>antech</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

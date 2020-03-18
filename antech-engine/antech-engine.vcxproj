@@ -150,6 +150,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Antech.h" />
+    <ClInclude Include="src\antech\Layer.h" />
+    <ClInclude Include="src\antech\LayerStack.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\antech\Application.h" />
     <ClInclude Include="src\antech\Core.h" />
@@ -163,6 +165,8 @@
     <ClInclude Include="src\hzpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\antech\Layer.cpp" />
+    <ClCompile Include="src\antech\LayerStack.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\antech\Application.cpp" />
     <ClCompile Include="src\antech\Log.cpp" />

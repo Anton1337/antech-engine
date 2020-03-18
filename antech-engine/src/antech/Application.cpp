@@ -1,7 +1,6 @@
 #include "hzpch.h"
 #include "Application.h"
 
-#include "antech/Events/ApplicationEvent.h"
 #include "antech/Log.h"
 
 #include <GLFW/glfw3.h>
@@ -17,7 +16,11 @@ namespace Antech {
 	Application::~Application(){}
 
 	void Application::OnEvent(Event& e) {
-		AT_CORE_INFO("{0}", e);
+		EventDispatcher dispatcher(e);
+		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
+
+
+		AT_CORE_TRACE("{0}", e);
 	}
 
 	void Application::Run() {
@@ -27,5 +30,10 @@ namespace Antech {
 			glClear(GL_COLOR_BUFFER_BIT);
 			m_Window->OnUpdate();
 		}
+	}
+
+	bool Application::OnWindowClose(WindowCloseEvent& e) {
+		m_Running = false;
+		return true;
 	}
 }
