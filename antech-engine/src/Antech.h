@@ -3,6 +3,7 @@
 // For use by Antech Engine applications
 
 #include "antech/Application.h";
+#include "antech/Layer.h"
 #include "antech/Log.h";
 
 // --- Entry Point ---------------

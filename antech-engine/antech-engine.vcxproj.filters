@@ -40,6 +40,12 @@
     <ClInclude Include="src\antech\Events\MouseEvent.h">
       <Filter>antech\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\antech\Layer.h">
+      <Filter>antech</Filter>
+    </ClInclude>
+    <ClInclude Include="src\antech\LayerStack.h">
+      <Filter>antech</Filter>
+    </ClInclude>
     <ClInclude Include="src\antech\Log.h">
       <Filter>antech</Filter>
     </ClInclude>
@@ -47,12 +53,6 @@
       <Filter>antech</Filter>
     </ClInclude>
     <ClInclude Include="src\hzpch.h" />
-    <ClInclude Include="src\antech\Layer.h">
-      <Filter>antech</Filter>
-    </ClInclude>
-    <ClInclude Include="src\antech\LayerStack.h">
-      <Filter>antech</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
@@ -61,15 +61,15 @@
     <ClCompile Include="src\antech\Application.cpp">
       <Filter>antech</Filter>
     </ClCompile>
-    <ClCompile Include="src\antech\Log.cpp">
-      <Filter>antech</Filter>
-    </ClCompile>
-    <ClCompile Include="src\hzpch.cpp" />
     <ClCompile Include="src\antech\Layer.cpp">
       <Filter>antech</Filter>
     </ClCompile>
     <ClCompile Include="src\antech\LayerStack.cpp">
       <Filter>antech</Filter>
     </ClCompile>
+    <ClCompile Include="src\antech\Log.cpp">
+      <Filter>antech</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hzpch.cpp" />
   </ItemGroup>
 </Project>

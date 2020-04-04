@@ -8,14 +8,16 @@ workspace "antech-engine"
   "Dist"
  }
 
- outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
- IncludeDir = {}
- IncludeDir["GLFW"] = "antech-engine/vendor/GLFW/include"
+IncludeDir = {}
+IncludeDir["GLFW"] = "antech-engine/vendor/GLFW/include"
+IncludeDir["Glad"] = "antech-engine/vendor/Glad/include"
 
- include "antech-engine/vendor/GLFW"
+include "antech-engine/vendor/GLFW"
+include "antech-engine/vendor/Glad"
 
- project "antech-engine"
+project "antech-engine"
  location "antech-engine"
  kind "SharedLib"
  language "C++"
@@ -36,24 +38,27 @@ workspace "antech-engine"
  {
   "%{prj.name}/src",
   "%{prj.name}/vendor/spdlog/include",
-  "%{IncludeDir.GLFW}"
+  "%{IncludeDir.GLFW}",
+  "%{IncludeDir.Glad}"
  }
 
  links
  {
    "GLFW",
+   "Glad",
    "opengl32.lib"
  }
 
  filter "system:windows"
   cppdialect "C++17"
-  staticruntime "On"
+  staticruntime "on"
   systemversion "latest"
 
   defines
   {
    "AT_PLATFORM_WINDOWS",
-   "AT_BUILD_DLL"
+   "AT_BUILD_DLL",
+   "GLFW_INCLUDE_NONE"
   }
 
   postbuildcommands
@@ -63,14 +68,17 @@ workspace "antech-engine"
 
  filter "configurations:Debug"
   defines "AT_DEBUG"
+  buildoptions "/MDd"
   symbols "On"
 
  filter "configurations:Release"
   defines "AT_RELEASE"
+  buildoptions "/MDd"
   optimize "On"
 
  filter "configurations:Dist"
   defines "AT_DIST"
+  buildoptions "/MDd"
   optimize "On"
 
 project "Sandbox"
